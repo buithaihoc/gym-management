@@ -230,6 +230,7 @@ function Login({ onLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    // Demo: Login with any credentials
     if (formData.email && formData.password) {
       const roleMap = {
         'admin@gym.com': 'admin',
