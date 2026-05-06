@@ -1,0 +1,80 @@
+/* ===== PT STUDENTS ===== */
+.pt-students-page { max-width: 700px; margin: 0 auto; animation: fadeIn 0.3s ease; }
+.pt-student-detail { max-width: 700px; margin: 0 auto; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.btn-back { background: none; border: none; color: #059669; font-size: 0.9rem; cursor: pointer; padding: 0.5rem 0; margin-bottom: 0.75rem; }
+.btn-back:hover { text-decoration: underline; }
+
+.pt-page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; }
+.pt-page-header h2 { font-size: 1.25rem; color: #064e3b; margin: 0; }
+.student-count { font-size: 0.8rem; color: #64748b; background: #e2e8f0; padding: 0.2rem 0.65rem; border-radius: 20px; font-weight: 500; }
+
+/* ===== STUDENT LIST ===== */
+.student-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.student-card { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); cursor: pointer; transition: all 0.2s; border: 1px solid transparent; }
+.student-card:hover { border-color: #059669; box-shadow: 0 4px 12px rgba(5,150,105,0.1); }
+.student-avatar { font-size: 2.2rem; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: #ecfdf5; border-radius: 12px; }
+.student-card-info { flex: 1; }
+.student-card-info h4 { font-size: 0.9rem; color: #1e293b; margin: 0 0 0.2rem; }
+.student-card-info p { font-size: 0.78rem; color: #64748b; margin: 0 0 0.35rem; }
+.student-meta { display: flex; gap: 1rem; font-size: 0.72rem; color: #94a3b8; }
+.student-arrow { font-size: 1.2rem; color: #94a3b8; }
+
+/* ===== STUDENT DETAIL ===== */
+.pt-student-header { display: flex; align-items: center; gap: 1.25rem; background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.pt-student-avatar { font-size: 3rem; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; background: #ecfdf5; border-radius: 50%; }
+.pt-student-info h2 { font-size: 1.2rem; color: #064e3b; margin: 0 0 0.3rem; }
+.pt-student-info p { font-size: 0.82rem; color: #64748b; margin: 0.15rem 0; }
+
+/* ===== TABS ===== */
+.pt-student-tabs { display: flex; gap: 0; background: white; border-radius: 12px; overflow: hidden; margin-bottom: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.pt-student-tabs .tab-btn { flex: 1; padding: 0.7rem; border: none; background: white; color: #64748b; font-size: 0.82rem; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; }
+.pt-student-tabs .tab-btn.active { color: #059669; border-bottom-color: #059669; font-weight: 600; }
+.pt-student-tabs .tab-btn:hover:not(.active) { background: #f8fafc; }
+
+/* ===== SECTION ===== */
+.pt-section { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+
+/* ===== PROFILE ===== */
+.profile-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.profile-detail-item { display: flex; flex-direction: column; gap: 0.2rem; }
+.profile-detail-item label { font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+.profile-detail-item span { font-size: 0.9rem; color: #1e293b; font-weight: 500; }
+
+/* ===== HEALTH ===== */
+.health-detail { display: flex; flex-direction: column; gap: 1.25rem; }
+.health-section { padding: 1rem; background: #f8fafc; border-radius: 8px; }
+.health-section h4 { font-size: 0.85rem; color: #1e293b; margin: 0 0 0.4rem; }
+.health-section p { font-size: 0.85rem; color: #475569; margin: 0; line-height: 1.6; }
+.health-section.warning { background: #fffbeb; border-left: 3px solid #f59e0b; }
+.health-disclaimer { font-size: 0.78rem; color: #ef4444; padding: 0.5rem; background: #fef2f2; border-radius: 8px; margin: 0; }
+
+/* ===== INBODY ===== */
+.inbody-summary { margin-bottom: 1.25rem; }
+.inbody-current h4 { font-size: 0.9rem; color: #064e3b; margin: 0 0 0.75rem; }
+.inbody-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.75rem; }
+.inbody-item { text-align: center; padding: 0.75rem; background: #f0fdf4; border-radius: 8px; }
+.ib-value { display: block; font-size: 1.15rem; font-weight: 700; color: #059669; }
+.ib-label { font-size: 0.65rem; color: #64748b; }
+.inbody-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.inbody-table th { padding: 0.55rem 0.65rem; text-align: left; font-size: 0.72rem; color: #64748b; border-bottom: 2px solid #e2e8f0; background: #f8fafc; }
+.inbody-table td { padding: 0.55rem 0.65rem; border-bottom: 1px solid #f1f5f9; }
+
+/* ===== NOTES ===== */
+.notes-section { display: flex; flex-direction: column; gap: 1rem; }
+.add-note-form textarea { width: 100%; padding: 0.6rem 0.85rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit; font-size: 0.85rem; resize: vertical; box-sizing: border-box; margin-bottom: 0.5rem; }
+.add-note-form textarea:focus { outline: none; border-color: #059669; box-shadow: 0 0 0 3px rgba(5,150,105,0.1); }
+.notes-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.note-card { padding: 0.85rem; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+.note-card .note-header { display: flex; justify-content: space-between; margin-bottom: 0.35rem; }
+.note-card .note-author { font-weight: 600; font-size: 0.8rem; color: #059669; }
+.note-card .note-date { font-size: 0.7rem; color: #94a3b8; }
+.note-card p { font-size: 0.82rem; color: #475569; margin: 0; line-height: 1.5; }
+.text-muted { color: #94a3b8; font-size: 0.85rem; text-align: center; padding: 1rem; }
+
+.btn-primary { background: #059669; color: white; padding: 0.5rem 1rem; border: none; border-radius: 8px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+.btn-primary:hover { background: #047857; }
+.btn-sm { padding: 0.4rem 0.85rem !important; font-size: 0.8rem !important; }
+
+@media (max-width: 480px) { .profile-detail-grid { grid-template-columns: 1fr; } .inbody-grid { grid-template-columns: repeat(2,1fr); } }

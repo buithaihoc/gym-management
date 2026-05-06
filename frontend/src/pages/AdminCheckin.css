@@ -1,0 +1,55 @@
+/* ===== CHECKIN PAGE ===== */
+.checkin-page { max-width: 900px; margin: 0 auto; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.75rem; }
+.page-header h2 { font-size: 1.3rem; color: #1e293b; margin: 0; }
+
+.checkin-message { background: #dcfce7; border: 1px solid #bbf7d0; color: #16a34a; padding: 0.65rem 1rem; border-radius: 8px; font-size: 0.85rem; margin-bottom: 1rem; }
+
+.checkin-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 0.75rem; margin-bottom: 1.25rem; }
+.cs-card { background: white; padding: 1rem; border-radius: 12px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-left: 4px solid; }
+.cs-card.blue { border-color: #1e40af; } .cs-card.green { border-color: #22c55e; } .cs-card.orange { border-color: #f59e0b; }
+.cs-value { display: block; font-size: 1.4rem; font-weight: 700; color: #1e293b; }
+.cs-label { font-size: 0.7rem; color: #64748b; }
+
+/* ===== QR SCANNER ===== */
+.qr-scanner-area { background: white; border-radius: 12px; padding: 1.5rem; text-align: center; margin-bottom: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.scanner-frame { position: relative; width: 200px; height: 200px; margin: 0 auto 1rem; border: 3px solid #1e40af; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #1e293b; }
+.scanner-placeholder { font-size: 3rem; opacity: 0.5; }
+.scanner-line { position: absolute; width: 100%; height: 2px; background: #1e40af; top: 0; animation: scanLine 2s ease-in-out infinite; }
+@keyframes scanLine { 0%, 100% { top: 0; } 50% { top: calc(100% - 2px); } }
+.qr-scanner-area p { font-size: 0.85rem; color: #64748b; margin: 0; }
+
+/* ===== TOOLS ===== */
+.checkin-tools { display: flex; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+.manual-checkin { flex: 1; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.manual-checkin h4 { font-size: 0.85rem; color: #1e293b; margin: 0 0 0.5rem; }
+.manual-input-group { display: flex; gap: 0.5rem; }
+.manual-input-group input { flex: 1; padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 0.85rem; }
+.manual-input-group input:focus { outline: none; border-color: #1e40af; }
+
+.search-box { display: flex; align-items: center; gap: 0.5rem; background: white; padding: 0.5rem 0.85rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); min-width: 250px; }
+.search-box input { border: none; flex: 1; font-size: 0.85rem; padding: 0.25rem 0; }
+.search-box input:focus { outline: none; }
+
+/* ===== TABLE ===== */
+.table-container { overflow-x: auto; background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.checkin-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.checkin-table th { padding: 0.65rem 0.85rem; text-align: left; font-size: 0.75rem; color: #64748b; text-transform: uppercase; border-bottom: 2px solid #e2e8f0; background: #f8fafc; }
+.checkin-table td { padding: 0.65rem 0.85rem; border-bottom: 1px solid #f1f5f9; }
+.checkin-table tbody tr:hover { background: #f8fafc; }
+.td-member { font-weight: 500; }
+.td-time { font-weight: 600; color: #1e40af; }
+.text-active { color: #22c55e; font-weight: 500; }
+.text-muted { color: #94a3b8; font-size: 0.8rem; }
+
+.btn-checkout { background: #fef2f2; border: 1px solid #fecaca; color: #ef4444; padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; cursor: pointer; }
+.btn-checkout:hover { background: #fee2e2; }
+
+.btn-primary { background: #1e40af; color: white; padding: 0.55rem 1.1rem; border: none; border-radius: 8px; font-size: 0.9rem; cursor: pointer; transition: all 0.2s; }
+.btn-primary.scanning { background: #dc2626; }
+.btn-primary:hover { background: #1e3a8a; }
+.btn-sm { padding: 0.35rem 0.75rem !important; font-size: 0.8rem !important; }
+
+@media (max-width: 480px) { .checkin-tools { flex-direction: column; } }

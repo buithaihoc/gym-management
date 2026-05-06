@@ -1,0 +1,83 @@
+/* ===== PT CURRICULUM ===== */
+.pt-curriculum-page { max-width: 800px; margin: 0 auto; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.pt-page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; }
+.pt-page-header h2 { font-size: 1.25rem; color: #064e3b; margin: 0; }
+
+.curriculum-tabs { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; }
+.curriculum-tabs .tab-btn { flex: 1; padding: 0.65rem; border: 1px solid #e2e8f0; border-radius: 10px; background: white; color: #64748b; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+.curriculum-tabs .tab-btn.active { background: #059669; color: white; border-color: #059669; }
+.curriculum-tabs .tab-btn:hover:not(.active) { border-color: #059669; }
+
+/* ===== LIST ===== */
+.curriculum-list { display: flex; flex-direction: column; gap: 1rem; }
+.curriculum-card { background: white; border-radius: 12px; padding: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-left: 4px solid #059669; }
+.curriculum-card.draft { border-left-color: #f59e0b; opacity: 0.8; }
+
+.curriculum-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; }
+.curriculum-top h4 { font-size: 0.95rem; margin: 0; color: #064e3b; }
+.cur-status { font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 500; }
+.cur-status.active { background: #dcfce7; color: #16a34a; }
+.cur-status.draft { background: #fef3c7; color: #d97706; }
+
+.cur-student, .cur-goal { font-size: 0.82rem; color: #475569; margin: 0.15rem 0; }
+.cur-meta { display: flex; gap: 1rem; font-size: 0.72rem; color: #94a3b8; margin-top: 0.3rem; }
+
+/* ===== EXERCISES ===== */
+.cur-exercises, .cur-meals { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; }
+.cur-exercises h5, .cur-meals h5 { font-size: 0.82rem; color: #064e3b; margin: 0 0 0.5rem; }
+.ex-item, .meal-item { display: flex; gap: 0.5rem; padding: 0.4rem 0; font-size: 0.8rem; border-bottom: 1px solid #f1f5f9; }
+.ex-item:last-child, .meal-item:last-child { border-bottom: none; }
+.ex-name { min-width: 120px; font-weight: 500; color: #1e293b; }
+.ex-detail { min-width: 80px; color: #64748b; }
+.ex-note { color: #f59e0b; }
+.meal-time { min-width: 110px; font-weight: 500; color: #1e293b; }
+.meal-foods { flex: 1; color: #475569; }
+.meal-cal { min-width: 60px; text-align: right; color: #64748b; }
+
+/* ===== ACTIONS ===== */
+.cur-actions { display: flex; gap: 0.5rem; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid #e2e8f0; }
+
+/* ===== FORM ===== */
+.curriculum-form { padding: 1.5rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; font-size: 0.82rem; font-weight: 500; color: #374151; margin-bottom: 0.35rem; }
+.form-group .required { color: #ef4444; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.55rem 0.8rem; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 0.85rem; box-sizing: border-box; background: #f8fafc; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #059669; box-shadow: 0 0 0 3px rgba(5,150,105,0.1); background: white; }
+
+.form-section { background: #f8fafc; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+.form-section h4 { font-size: 0.85rem; color: #064e3b; margin: 0 0 0.75rem; }
+
+.exercise-row, .meal-row { display: flex; gap: 0.5rem; margin-bottom: 0.5rem; align-items: center; }
+.exercise-row input { padding: 0.45rem 0.6rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.8rem; flex: 1; }
+.exercise-row .input-sm { max-width: 70px; }
+.exercise-row .input-md { max-width: 120px; }
+.meal-row input { padding: 0.45rem 0.6rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.8rem; }
+.meal-row .input-time { max-width: 120px; }
+.meal-row .input-foods { flex: 1; }
+.meal-row .input-cal { max-width: 70px; }
+
+.btn-remove { background: none; border: none; color: #ef4444; font-size: 1rem; cursor: pointer; padding: 0.25rem; }
+.btn-add-row { background: none; border: 1px dashed #cbd5e1; color: #059669; padding: 0.4rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; width: 100%; transition: all 0.2s; }
+.btn-add-row:hover { border-color: #059669; background: #f0fdf4; }
+
+.form-actions { display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; }
+
+/* ===== MODAL ===== */
+.modal-overlay { position: fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; animation: fadeIn 0.2s; }
+.modal-content { background: white; border-radius: 16px; width: 90%; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.modal-lg { max-width: 750px; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; border-bottom: 1px solid #e2e8f0; }
+.modal-header h3 { margin: 0; font-size: 1.05rem; color: #064e3b; }
+.modal-close { background: none; border: none; font-size: 1.1rem; cursor: pointer; color: #94a3b8; }
+
+.btn-primary { background: #059669; color: white; padding: 0.5rem 1.1rem; border: none; border-radius: 8px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+.btn-primary:hover { background: #047857; }
+.btn-secondary { background: #e2e8f0; color: #475569; padding: 0.5rem 1.1rem; border: none; border-radius: 8px; cursor: pointer; }
+.btn-outline { background: none; border: 1px solid #059669; color: #059669; padding: 0.5rem 1.1rem; border-radius: 8px; cursor: pointer; font-size: 0.85rem; }
+.btn-sm { padding: 0.35rem 0.75rem !important; font-size: 0.78rem !important; }
+
+@media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } .exercise-row, .meal-row { flex-wrap: wrap; } }

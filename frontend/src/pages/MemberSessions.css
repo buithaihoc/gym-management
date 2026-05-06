@@ -1,0 +1,378 @@
+/* ===== MEMBER SESSIONS PAGE ===== */
+.member-sessions-page {
+  max-width: 650px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== INFO BANNER ===== */
+.sessions-info-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.sessions-info-banner .info-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.sessions-info-banner p {
+  font-size: 0.85rem;
+  color: #1e40af;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ===== SUMMARY ===== */
+.sessions-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.summary-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.summary-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  line-height: 1.2;
+}
+
+.summary-value.pending {
+  color: #f59e0b;
+}
+
+.summary-label {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ===== SESSION LIST ===== */
+.sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.session-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.session-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.session-card.cancelled {
+  opacity: 0.6;
+}
+
+.session-main {
+  display: flex;
+  gap: 1rem;
+  padding: 1.15rem;
+}
+
+.session-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 48px;
+  padding: 0.4rem;
+  background: #eff6ff;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.session-day {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e40af;
+  line-height: 1;
+}
+
+.session-month {
+  font-size: 0.6rem;
+  color: #64748b;
+}
+
+.session-content {
+  flex: 1;
+}
+
+.session-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.session-time {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.session-trainer {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* ===== BADGES ===== */
+.session-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.session-badge.pending {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.session-badge.confirmed {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.session-badge.cancelled {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+/* ===== SESSION NOTE ===== */
+.session-note {
+  margin-top: 0.5rem;
+  padding: 0.65rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 3px solid #22c55e;
+}
+
+.session-note p {
+  font-size: 0.82rem;
+  color: #475569;
+  margin: 0 0 0.3rem;
+  line-height: 1.5;
+}
+
+.session-image-proof {
+  font-size: 0.78rem;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+/* ===== PENDING ACTIONS ===== */
+.session-pending-actions {
+  margin-top: 0.65rem;
+}
+
+/* ===== CONFIRM FORM ===== */
+.session-confirm-form {
+  padding: 0 1.15rem 1.15rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.session-confirm-form .form-group {
+  margin-bottom: 0.85rem;
+}
+
+.session-confirm-form label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.35rem;
+}
+
+.session-confirm-form .required {
+  color: #ef4444;
+}
+
+/* ===== IMAGE UPLOAD ===== */
+.image-upload-box {
+  border: 2px dashed #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.image-upload-box:hover {
+  border-color: #1e40af;
+  background: #f8fafc;
+}
+
+.image-upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.upload-icon {
+  font-size: 2rem;
+}
+
+.image-upload-placeholder span:last-child {
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.image-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #f0fdf4;
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+}
+
+.image-preview-icon {
+  font-size: 1.5rem;
+}
+
+.image-preview-name {
+  font-size: 0.82rem;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.btn-remove-image {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+
+.btn-remove-image:hover {
+  color: #ef4444;
+}
+
+/* ===== TEXTAREA ===== */
+.session-confirm-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.session-confirm-form textarea:focus {
+  outline: none;
+  border-color: #1e40af;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+/* ===== FORM ACTIONS ===== */
+.session-confirm-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* ===== BUTTONS (shared) ===== */
+.btn-primary {
+  background: #1e40af;
+  color: white;
+  padding: 0.55rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: #1e3a8a;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #475569;
+  padding: 0.55rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #cbd5e1;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.85rem !important;
+  font-size: 0.8rem !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .sessions-summary {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .summary-value {
+    font-size: 1.2rem;
+  }
+
+  .session-main {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .session-date-box {
+    flex-direction: row;
+    gap: 0.35rem;
+    align-items: center;
+    min-width: auto;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .session-day {
+    font-size: 0.9rem;
+  }
+
+  .session-month {
+    font-size: 0.7rem;
+  }
+}

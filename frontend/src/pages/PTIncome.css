@@ -1,0 +1,69 @@
+/* ===== PT INCOME ===== */
+.pt-income-page { max-width: 800px; margin: 0 auto; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.pt-page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.75rem; }
+.pt-page-header h2 { font-size: 1.25rem; color: #064e3b; margin: 0; }
+.month-select { padding: 0.4rem 0.65rem; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 0.85rem; background: white; }
+
+/* ===== INCOME SUMMARY ===== */
+.income-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; }
+.income-main-card { background: linear-gradient(135deg, #059669, #047857); color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(5,150,105,0.3); }
+.im-label { font-size: 0.78rem; opacity: 0.8; display: block; }
+.im-amount { font-size: 1.8rem; font-weight: 700; display: block; margin: 0.2rem 0 0.5rem; }
+.income-per-session { display: flex; gap: 1rem; font-size: 0.78rem; opacity: 0.9; margin-bottom: 0.5rem; }
+.income-compare { font-size: 0.75rem; opacity: 0.7; }
+.income-up { color: #86efac; }
+
+.income-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.income-stat { background: white; padding: 0.75rem; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.is-value { display: block; font-size: 1.2rem; font-weight: 700; color: #1e293b; }
+.is-value.green { color: #059669; }
+.is-value.orange { color: #f59e0b; }
+.is-value.red { color: #ef4444; }
+.is-label { font-size: 0.65rem; color: #64748b; }
+
+/* ===== COMPLETE LIST ===== */
+.complete-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.complete-item { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: #f0fdf4; border-radius: 10px; border: 1px solid #bbf7d0; flex-wrap: wrap; gap: 0.5rem; }
+.complete-info { display: flex; flex-direction: column; gap: 0.1rem; }
+.complete-student { font-weight: 600; font-size: 0.85rem; color: #064e3b; }
+.complete-detail { font-size: 0.75rem; color: #64748b; }
+
+/* ===== SESSION HISTORY TABLE ===== */
+.session-history-table-wrapper { overflow-x: auto; }
+.session-history-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.session-history-table th { padding: 0.6rem 0.65rem; text-align: left; font-size: 0.72rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid #e2e8f0; background: #f8fafc; white-space: nowrap; }
+.session-history-table td { padding: 0.6rem 0.65rem; border-bottom: 1px solid #f1f5f9; color: #334155; }
+.session-history-table tbody tr:hover { background: #f8fafc; }
+.td-student { font-weight: 500; color: #1e293b; }
+.td-amount { font-weight: 600; color: #059669; font-family: monospace; }
+
+.session-status { font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 500; }
+.session-status.paid { background: #dcfce7; color: #16a34a; }
+.session-status.pending { background: #fef3c7; color: #d97706; }
+.session-status.unconfirmed { background: #f1f5f9; color: #94a3b8; }
+
+/* ===== COMPLETED LIST ===== */
+.completed-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.completed-item { display: flex; align-items: center; gap: 1rem; padding: 0.7rem; border: 1px solid #e2e8f0; border-radius: 10px; }
+.completed-date-box { display: flex; flex-direction: column; align-items: center; min-width: 42px; padding: 0.3rem; background: #f0fdf4; border-radius: 8px; }
+.cd-day { font-size: 0.95rem; font-weight: 700; color: #059669; line-height: 1; }
+.cd-month { font-size: 0.55rem; color: #64748b; }
+.completed-info { flex: 1; display: flex; flex-direction: column; gap: 0.1rem; }
+.ci-student { font-weight: 500; font-size: 0.85rem; color: #1e293b; }
+.ci-time { font-size: 0.72rem; color: #64748b; }
+.ci-status { font-size: 0.72rem; color: #16a34a; font-weight: 500; }
+
+/* ===== SECTION ===== */
+.pt-section { background: white; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.pt-section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.pt-section-title { font-size: 1rem; color: #064e3b; margin: 0; font-weight: 600; }
+
+.text-muted { color: #94a3b8; font-size: 0.85rem; text-align: center; padding: 1rem; }
+
+.btn-primary { background: #059669; color: white; padding: 0.5rem 1.1rem; border: none; border-radius: 8px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+.btn-primary:hover { background: #047857; }
+.btn-sm { padding: 0.35rem 0.75rem !important; font-size: 0.78rem !important; }
+
+@media (max-width: 480px) { .income-summary { grid-template-columns: 1fr; } }

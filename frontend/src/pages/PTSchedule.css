@@ -1,0 +1,69 @@
+/* ===== PT SCHEDULE ===== */
+.pt-schedule-page { max-width: 900px; margin: 0 auto; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.pt-page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; }
+.pt-page-header h2 { font-size: 1.25rem; color: #064e3b; margin: 0; }
+.pending-alert { font-size: 0.8rem; color: #d97706; background: #fef3c7; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 500; }
+
+/* ===== CONTROLS ===== */
+.schedule-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem; }
+.view-toggle { display: flex; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
+.view-toggle .toggle-btn { padding: 0.4rem 0.85rem; border: none; background: white; color: #64748b; font-size: 0.8rem; cursor: pointer; }
+.view-toggle .toggle-btn.active { background: #059669; color: white; }
+.week-nav { display: flex; align-items: center; gap: 0.5rem; }
+.btn-nav { background: none; border: 1px solid #e2e8f0; padding: 0.3rem 0.6rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
+.week-label { font-size: 0.85rem; font-weight: 500; color: #1e293b; min-width: 70px; text-align: center; }
+
+/* ===== WEEK HEADER ===== */
+.week-header { display: grid; grid-template-columns: repeat(7,1fr); gap: 0.5rem; margin-bottom: 0.5rem; }
+.week-day { text-align: center; padding: 0.5rem; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.week-day.today { background: #059669; color: white; }
+.wd-name { display: block; font-size: 0.7rem; text-transform: uppercase; opacity: 0.7; }
+.wd-date { display: block; font-size: 0.9rem; font-weight: 700; }
+
+/* ===== WEEK GRID ===== */
+.week-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 0.5rem; margin-bottom: 1.25rem; }
+.week-cell { min-height: 180px; background: white; border-radius: 8px; padding: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 0.4rem; }
+.week-cell.empty { background: #f8fafc; }
+.empty-slot { font-size: 0.72rem; color: #cbd5e1; text-align: center; padding: 1rem 0; }
+
+.booking-card { padding: 0.5rem; border-radius: 6px; font-size: 0.72rem; border-left: 3px solid #059669; }
+.booking-card.pending { background: #fffbeb; border-left-color: #f59e0b; }
+.booking-card.confirmed { background: #f0fdf4; }
+.booking-time { display: block; font-weight: 600; color: #1e293b; }
+.booking-student { display: block; color: #475569; }
+.booking-type { display: block; color: #64748b; font-size: 0.65rem; }
+.booking-actions { display: flex; flex-direction: column; gap: 0.2rem; margin-top: 0.3rem; }
+.booking-actions button { font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; cursor: pointer; border: none; }
+.btn-confirm { background: #059669; color: white; }
+.btn-reschedule { background: #dbeafe; color: #1e40af; }
+.btn-reject { background: #fef2f2; color: #ef4444; }
+.confirmed-info { font-size: 0.65rem; color: #16a34a; display: block; margin-top: 0.25rem; }
+
+/* ===== PENDING LIST ===== */
+.pending-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.pending-item { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem; background: #fffbeb; border-radius: 10px; border: 1px solid #fde68a; flex-wrap: wrap; gap: 0.75rem; }
+.pending-info { display: flex; flex-direction: column; gap: 0.15rem; }
+.pending-student { font-weight: 600; font-size: 0.9rem; color: #1e293b; }
+.pending-detail { font-size: 0.78rem; color: #64748b; }
+.pending-actions { display: flex; gap: 0.4rem; }
+.pending-actions button { padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.72rem; cursor: pointer; border: none; }
+
+/* ===== SECTION ===== */
+.pt-section { background: white; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.pt-section-title { font-size: 1rem; color: #064e3b; margin: 0 0 1rem; font-weight: 600; }
+
+.schedule-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+.ss-item { text-align: center; padding: 0.75rem; background: #f8fafc; border-radius: 8px; }
+.ss-value { display: block; font-size: 1.3rem; font-weight: 700; color: #059669; }
+.ss-value.pending { color: #f59e0b; }
+.ss-label { font-size: 0.7rem; color: #64748b; }
+
+.text-muted { color: #94a3b8; font-size: 0.85rem; text-align: center; padding: 1rem; }
+
+@media (max-width: 768px) {
+  .week-header, .week-grid { grid-template-columns: repeat(4,1fr); }
+  .week-day:nth-child(n+5), .week-cell:nth-child(n+5) { display: none; }
+  .pending-item { flex-direction: column; align-items: flex-start; }
+}

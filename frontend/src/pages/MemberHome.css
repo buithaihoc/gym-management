@@ -1,0 +1,431 @@
+/* ===== MEMBER HOME ===== */
+.member-home {
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== WELCOME BANNER ===== */
+.welcome-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.welcome-text h2 {
+  font-size: 1.35rem;
+  color: #1e293b;
+  margin: 0 0 0.3rem;
+}
+
+.welcome-text p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.checkin-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.checkin-badge.checked-in {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.checkin-badge.not-checked {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* ===== MEMBERSHIP CARD ===== */
+.membership-card {
+  position: relative;
+  background: linear-gradient(135deg, #1e40af, #1e3a8a, #0ea5e9);
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: white;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card-pattern {
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.card-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card-type {
+  background: rgba(255,255,255,0.2);
+  padding: 0.2rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.card-member-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.card-dates {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-date-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-date-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+  letter-spacing: 0.05em;
+}
+
+.card-date-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.card-days-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.days-left-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.days-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.days-label {
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+.days-text {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ===== STATS ===== */
+.member-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.member-stat-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.member-stat-card .stat-value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 0.2rem;
+}
+
+.member-stat-card .stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  color: #1e293b;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.section-header .section-title {
+  margin: 0;
+}
+
+.section-link {
+  font-size: 0.8rem;
+  color: #1e40af;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== QUICK ACTIONS ===== */
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.75rem;
+}
+
+.quick-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-color: var(--accent, #1e40af);
+}
+
+.qa-icon {
+  font-size: 1.8rem;
+}
+
+.qa-label {
+  font-size: 0.78rem;
+  color: #475569;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ===== HOME COLUMNS ===== */
+.home-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* ===== CHECK-IN LIST ===== */
+.checkin-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.checkin-item:last-child {
+  border-bottom: none;
+}
+
+.checkin-date {
+  font-weight: 500;
+  color: #1e293b;
+  font-size: 0.85rem;
+}
+
+.checkin-times {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.checkin-time {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.checkin-divider {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+}
+
+/* ===== UPCOMING SESSIONS ===== */
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.upcoming-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.upcoming-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 55px;
+  background: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.upcoming-day {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e40af;
+  line-height: 1;
+}
+
+.upcoming-month {
+  font-size: 0.65rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.upcoming-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.upcoming-type {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.upcoming-trainer,
+.upcoming-time {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.empty-state p {
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.btn-sm {
+  padding: 0.4rem 1rem !important;
+  font-size: 0.8rem !important;
+  display: inline-block !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .home-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .member-stats {
+    gap: 0.5rem;
+  }
+
+  .member-stat-card .stat-value {
+    font-size: 1.1rem;
+  }
+
+  .quick-actions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .member-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .member-stats .member-stat-card:last-child {
+    grid-column: 1 / -1;
+  }
+}

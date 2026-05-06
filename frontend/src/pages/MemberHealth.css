@@ -1,0 +1,313 @@
+/* ===== MEMBER HEALTH PAGE ===== */
+.member-health-page {
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== SUMMARY ===== */
+.health-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.health-summary-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border-left: 3px solid;
+}
+
+.health-summary-card.weight { border-color: #1e40af; }
+.health-summary-card.fat { border-color: #ef4444; }
+.health-summary-card.muscle { border-color: #22c55e; }
+.health-summary-card.bmi { border-color: #8b5cf6; }
+
+.hs-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+.hs-unit {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  display: block;
+}
+
+.hs-label {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ===== METRIC TABS ===== */
+.metric-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.metric-tab {
+  padding: 0.5rem 0.85rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.78rem;
+  color: #64748b;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.metric-tab.active {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+.metric-tab:hover:not(.active) {
+  border-color: #cbd5e1;
+}
+
+/* ===== CHART ===== */
+.health-chart-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.chart-header h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #1e293b;
+}
+
+.chart-change {
+  text-align: right;
+}
+
+.chart-change .up {
+  color: #22c55e;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.chart-change .down {
+  color: #22c55e;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.chart-period {
+  display: block;
+  font-size: 0.65rem;
+  color: #94a3b8;
+}
+
+/* ===== CHART CONTAINER ===== */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.chart-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 0.65rem;
+  color: #94a3b8;
+  width: 35px;
+  text-align: right;
+}
+
+.chart-area {
+  position: relative;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.chart-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.chart-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 2;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.chart-dot:hover {
+  transform: scale(1.5);
+}
+
+.chart-x-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  font-size: 0.65rem;
+  color: #94a3b8;
+  position: relative;
+}
+
+.chart-x-axis span {
+  position: relative;
+}
+
+/* ===== COMPARISON TABLE ===== */
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.section-title {
+  font-size: 1rem;
+  color: #1e293b;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.comparison-table th {
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.comparison-table td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+}
+
+.comparison-table td.positive {
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.comparison-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ===== HISTORY ===== */
+.health-history {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.health-history-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.85rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.history-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 45px;
+}
+
+.history-day {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e40af;
+  line-height: 1;
+}
+
+.history-month {
+  font-size: 0.6rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.history-content {
+  flex: 1;
+}
+
+.history-metrics {
+  font-size: 0.85rem;
+  color: #1e293b;
+  margin: 0 0 0.25rem;
+}
+
+.history-by {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .health-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .metric-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .metric-tab {
+    flex: 1;
+    text-align: center;
+    min-width: 70px;
+  }
+}
